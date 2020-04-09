@@ -157,7 +157,7 @@ Get the Grafana route:
 oc get route grafana-route -o jsonpath='{.spec.host}'
 ```
 
-**NOTE:** Use the original credentials **root/secret** as user/password. These credentials are defined in the [Grafana CR](./03-grafana.yaml) file.
+**NOTE:** Use the original credentials **root/secret** as user/password. These credentials are defined in the [Grafana CR](./03-grafana.yaml) file. Also, **wait a few minutes** for Grafan to finish its deployment.
 
 Grafana Dashaboards will be displayed in Grafana as:
 
@@ -179,7 +179,7 @@ AMQ Streams cluster is deployed using the custom resource in [kafka-cluster.yaml
 oc create -f 05-kafka-cluster.yaml
 ```
 
-**NOTE:** This will take around 5 minutes to complete.  You can watch the process by doing a `watch oc get pod`
+**NOTE:** This will take around **5 minutes** to complete.  You can watch the process by doing a `watch oc get pod`
 
 The AMQ Streams Cluster will be deployed with the following set of pods:
 
