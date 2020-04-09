@@ -179,7 +179,7 @@ AMQ Streams cluster is deployed using the custom resource in [kafka-cluster.yaml
 oc create -f 05-kafka-cluster.yaml
 ```
 
-**NOTE:** This will take around 10 minutes to complete.  You can watch the process by doing a `watch oc get pod`
+**NOTE:** This will take around 5 minutes to complete.  You can watch the process by doing a `watch oc get pod`
 
 The AMQ Streams Cluster will be deployed with the following set of pods:
 
