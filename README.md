@@ -1,5 +1,5 @@
 # Red Hat AMQ Streams Demo
-Red Hat AMQ Streams Operator with OpenShift Demo
+Red Hat AMQ Streams Operator with OpenShift
 
 This repos will demo the [Red Hat AMQ](https://www.redhat.com/en/technologies/jboss-middleware/amq) using [Red Hat AMQ Streams Operator](https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_streams_on_openshift/index#key-features-operators_str).
 
@@ -46,11 +46,11 @@ You may also create the project via the web console by following the instruction
 1. Login as the admin user.
 1. Install the AMQ Streams Operator by following the instructions [here](https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_streams_on_openshift/index#proc-deploying-cluster-operator-hub-str)
 
-    **NOTE:** Besure to install the AMQ Streams Operator to all (projects) namespaces so that it will be usable from any namespaces in the cluster.
+    **NOTE:** Install the AMQ Streams Operator to all (projects) namespaces so that it will be usable from any namespaces in the cluster.
 
 ## Create Operator Group
 
-To deploy Prometheus and Grafana Operators we need to install previously an OperatorGroup to match the Operator's installation mode and the namespace. This step is describe in [Adding Operators to a cluster](https://docs.openshift.com/container-platform/4.3/operators/olm-adding-operators-to-cluster.html) page from
+To deploy Prometheus and Grafana Operators, we need to first install an OperatorGroup to match the Operator's installation mode and the namespace. This step is describe in [Adding Operators to a cluster](https://docs.openshift.com/container-platform/4.3/operators/olm-adding-operators-to-cluster.html) page from
 [OpenShift 4.3 Documentation](https://docs.openshift.com/container-platform/4.3/welcome/index.html) site
 
 ```bash
@@ -71,15 +71,17 @@ This demo will use [Prometheus Operator](https://operatorhub.io/operator/prometh
 1. **Naviate** to the OperatorHub (*Operators -> OperatorHub*)
 1. **Type** `prometheus` in the *Filter by keyword*
 1. **Select** on the `Prometheus Operator`
+1. **Review** the Community Operator notice, and **click** `Continue`
 1. **Click** Install
-1. **Review** the options, and **click** `Subscribe`
+1. **Review** the default options, and **click** `Subscribe`
 
 ### Installing Grafana Operator
 1. **Naviate** to the OperatorHub (*Operators -> OperatorHub*)
 1. **Type** `grafana` in the *Filter by keyword*
 1. **Select** on the `Grafana Operator`
+1. **Review** the Community Operator notice, and **click** `Continue`
 1. **Click** Install
-1. **Review** the options, and **click** `Subscribe`
+1. **Review** the default options, and **click** `Subscribe`
 
 After several minutes we could check these operators are installed and availables:
 
@@ -191,6 +193,7 @@ demo-cluster-kafka-2                            2/2       Running   0          7
 demo-cluster-zookeeper-0                        2/2       Running   0          7h
 demo-cluster-zookeeper-1                        2/2       Running   0          7h
 demo-cluster-zookeeper-2                        2/2       Running   0          7h
+...
 ```
 
 ## Deploy Kafka Topic
